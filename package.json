@@ -1,43 +1,24 @@
 {
   "name": "youtube-watch",
-  "displayName": "YouTube Watcher",
-  "description": "Watch YouTube videos directly in your VS Code",
-  "version": "0.0.2",
-  "engines": {
-    "vscode": "^1.99.0"
-  },
   "publisher": "JacobToepfer",
-  "icon": "media/youtube-icon.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JacobT2006/youtube-watch"
+  "displayName": "youtube-watch",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.140.0"
   },
   "categories": [
     "Other"
   ],
+  "activationEvents": [],
   "main": "./out/extension.js",
-  "activationEvents": [
-    "onCommand:extension.youtube"
-  ],
   "contributes": {
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "youtubeWatcher",
-          "title": "YouTube",
-          "icon": "media/youtube-icon.svg"
-        }
-      ]
-    },
-    "views": {
-      "youtubewatcher": [
-        {
-          "id": "youtubeWatcher.youtubeView",
-          "name": "YouTube",
-          "icon": "media/youtube-icon.svg"
-        }
-      ]
-    }
+    "commands": [
+      {
+        "command": "youtube-watch.helloWorld",
+        "title": "Hello World"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -48,14 +29,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.99.0",
+    "@types/vscode": "^1.140.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "^8.28.0",
-    "@typescript-eslint/parser": "^8.28.0",
-    "eslint": "^9.23.0",
-    "typescript": "^5.8.2",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
   }
 }
