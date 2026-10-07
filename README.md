@@ -72,9 +72,9 @@ npm test
 
 ## Release notes
 
-### 0.0.1
+### 0.0.4
 
-Initial release of youtube-watch.
+Current release of youtube-watch.
 
 - Added YouTube Activity Bar view
 - Added browser selection flow
