@@ -1,16 +1,8 @@
-# youtube-watch README
-
-This is the README for your extension "youtube-watch". After writing up a brief description, we recommend including the following sections.
+# youtube-watch
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Select the YouTube logo in the Activity Bar to open the YouTube view. Choose **Open YouTube** in the view to open YouTube in VS Code's built-in browser in an editor group beside your current editor. This uses VS Code's browser view rather than the default system browser; YouTube playback can still be affected by the embedded browser's limitations. You can also run **YouTube: Open in VS Code Browser** from the Command Palette.
 
 ## Requirements
 
@@ -69,3 +61,6 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+
+Links for project
+https://dev.azure.com - Personal access token for pushing to vscode marketplace via workflow

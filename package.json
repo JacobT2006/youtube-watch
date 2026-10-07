@@ -10,15 +10,39 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onView:youtubeWatcher.home",
+    "onCommand:youtube-watch.openYouTube"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "youtube-watch.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "youtube-watch.openYouTube",
+        "title": "YouTube: Open in VS Code Browser"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "youtubeWatcher",
+          "title": "YouTube",
+          "icon": "media/youtube-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "youtubeWatcher": [
+        {
+          "id": "youtubeWatcher.home",
+          "name": "YouTube"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
