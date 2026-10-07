@@ -2,7 +2,9 @@
 
 ## Features
 
-Select the YouTube logo in the Activity Bar to open the YouTube view. Choose **Open YouTube** in the view to open YouTube in VS Code's built-in browser in an editor group beside your current editor. This uses VS Code's browser view rather than the default system browser; YouTube playback can still be affected by the embedded browser's limitations. You can also run **YouTube: Open in VS Code Browser** from the Command Palette.
+Select the YouTube logo in the Activity Bar to open its view. When no browser has been remembered, opening YouTube first prompts the user to choose one. Click the checkbox icon beside a browser to enable **Remember my choice**; with it unchecked, that browser is used once and the prompt appears again next time. Select **Choose Browser** in the view, or run **YouTube: Choose Browser** from the Command Palette, to change or clear the remembered choice. Available choices are System Default, Google Chrome, Mozilla Firefox, Microsoft Edge, and Brave. A browser must be installed for its selection to work.
+
+Select **Open YouTube** in the view, or run **YouTube: Open in Browser** from the Command Palette, to launch YouTube in the chosen browser.
 
 ## Requirements
 

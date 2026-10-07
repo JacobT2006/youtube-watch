@@ -23,5 +23,8 @@ suite('Extension Test Suite', () => {
 			)
 		);
 		assert.ok(!manifest.contributes.menus?.['editor/title']);
+		assert.ok(manifest.activationEvents.includes('onCommand:youtube-watch.chooseBrowser'));
+		assert.strictEqual(manifest.extensionKind[0], 'ui');
+		assert.strictEqual(manifest.dependencies.open, '^8.4.2');
 	});
 });

@@ -7,12 +7,16 @@
   "engines": {
     "vscode": "^1.140.0"
   },
+  "extensionKind": [
+    "ui"
+  ],
   "categories": [
     "Other"
   ],
   "activationEvents": [
     "onView:youtubeWatcher.home",
-    "onCommand:youtube-watch.openYouTube"
+    "onCommand:youtube-watch.openYouTube",
+    "onCommand:youtube-watch.chooseBrowser"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -23,7 +27,11 @@
       },
       {
         "command": "youtube-watch.openYouTube",
-        "title": "YouTube: Open in VS Code Browser"
+        "title": "YouTube: Open in Browser"
+      },
+      {
+        "command": "youtube-watch.chooseBrowser",
+        "title": "YouTube: Choose Browser"
       }
     ],
     "viewsContainers": {
@@ -53,17 +61,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.140.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
-    "typescript-eslint": "^8.61.1",
+    "@types/vscode": "^1.140.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
     "eslint": "^10.5.0",
     "typescript": "^6.0.3",
-    "@vscode/test-cli": "^0.0.15",
-    "@vscode/test-electron": "^3.0.0"
+    "typescript-eslint": "^8.61.1"
   },
   "overrides": {
     "diff": "^8.0.4",
     "serialize-javascript": "^7.0.6"
+  },
+  "dependencies": {
+    "open": "^8.4.2"
   }
 }
