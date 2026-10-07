@@ -1,16 +1,10 @@
-# youtube-watch README
-
-This is the README for your extension "youtube-watch". After writing up a brief description, we recommend including the following sections.
+# youtube-watch
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Select the YouTube logo in the Activity Bar to open its view. When no browser has been remembered, opening YouTube first prompts the user to choose one. Click the checkbox icon beside a browser to enable **Remember my choice**; with it unchecked, that browser is used once and the prompt appears again next time. Select **Choose Browser** in the view, or run **YouTube: Choose Browser** from the Command Palette, to change or clear the remembered choice. Available choices are System Default, Google Chrome, Mozilla Firefox, Microsoft Edge, and Brave. A browser must be installed for its selection to work.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Select **Open YouTube** in the view, or run **YouTube: Open in Browser** from the Command Palette, to launch YouTube in the chosen browser.
 
 ## Requirements
 
@@ -69,3 +63,6 @@ You can author your README using Visual Studio Code. Here are some useful editor
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+
+Links for project
+https://dev.azure.com - Personal access token for pushing to vscode marketplace via workflow
