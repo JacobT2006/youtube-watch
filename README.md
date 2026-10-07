@@ -1,68 +1,90 @@
 # youtube-watch
 
+A lightweight VS Code extension that lets you open YouTube in your preferred browser with a single click.
+
+Open YouTube directly from the Activity Bar, choose a browser once, and optionally remember that choice for future launches.
+
 ## Features
 
-Select the YouTube logo in the Activity Bar to open its view. When no browser has been remembered, opening YouTube first prompts the user to choose one. Click the checkbox icon beside a browser to enable **Remember my choice**; with it unchecked, that browser is used once and the prompt appears again next time. Select **Choose Browser** in the view, or run **YouTube: Choose Browser** from the Command Palette, to change or clear the remembered choice. Available choices are System Default, Google Chrome, Mozilla Firefox, Microsoft Edge, and Brave. A browser must be installed for its selection to work.
+- Adds a dedicated YouTube view to the Activity Bar
+- Opens YouTube in your selected browser
+- Lets you choose between System Default, Chrome, Firefox, Edge, and Brave
+- Remembers your preferred browser when enabled
+- Supports quick access from the Command Palette
 
-Select **Open YouTube** in the view, or run **YouTube: Open in Browser** from the Command Palette, to launch YouTube in the chosen browser.
+## How it works
+
+1. Click the YouTube icon in the Activity Bar.
+2. Select a browser from the quick pick list.
+3. If you enable the remember option, the extension will reuse that browser automatically.
+4. Use the "Open YouTube" action or run "YouTube: Open in Browser" from the Command Palette whenever you want to launch YouTube.
+
+## Commands
+
+This extension contributes the following commands:
+
+- `YouTube: Open in Browser`
+  - Opens `https://www.youtube.com` in the selected browser.
+- `YouTube: Choose Browser`
+  - Lets you pick a browser and optionally save it as your default.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- VS Code `^1.140.0`
+- A supported browser installed on your machine:
+  - System default browser
+  - Google Chrome
+  - Mozilla Firefox
+  - Microsoft Edge
+  - Brave
+
+If you choose a browser that is not installed, the extension may fail to open the page.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension does not currently expose custom settings via `contributes.configuration`.
 
-For example:
+## Installation
 
-This extension contributes the following settings:
+1. Install the extension from the VS Code Marketplace.
+2. Reload VS Code if prompted.
+3. Click the YouTube icon in the Activity Bar to start using it.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Development
 
-## Known Issues
+```bash
+npm install
+npm run compile
+npm run lint
+npm test
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Project structure
 
-## Release Notes
+- `src/extension.ts` — main extension logic and browser selection flow
+- `media/` — extension assets
+- `package.json` — extension metadata, commands, and activity bar contributions
 
-Users appreciate release notes as you update your extension.
+## Known issues
 
-### 1.0.0
+- Browser selection is only remembered if you explicitly choose the remember option.
+- Opening a browser may fail if the selected app is not installed or blocked by the operating system.
 
-Initial release of ...
+## Release notes
 
-### 1.0.1
+### 0.0.1
 
-Fixed issue #.
+Initial release of youtube-watch.
 
-### 1.1.0
+- Added YouTube Activity Bar view
+- Added browser selection flow
+- Added quick browser launch support
+- Added ability to remember the preferred browser
 
-Added features X, Y, and Z.
+## License
 
----
+This project is distributed under the license specified in the repository.
 
-## Following extension guidelines
+## Contributing
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
-
-Links for project
-https://dev.azure.com - Personal access token for pushing to vscode marketplace via workflow
+Contributions are welcome. If you want to improve the extension, open an issue or submit a pull request with your changes.
